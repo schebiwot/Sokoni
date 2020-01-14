@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body%}
+{% if products %}
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col col-md-4">
+            <a href="/products/{{product.id}}">
+                <div class="card" style="width: 18rem;">
+                    <img src="./static/bata.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        NAME{{product.name}}<br>
+                        PRICE{{product.price}}<br>
+                        SIZE{{product.size}}<br>
+                        COLOR{{product.color}}<br>
+                        Image{{product.image}}<br>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% else %}
+<p>products not available</p>
+{% endif %}
+
+{% endblock body %}
+

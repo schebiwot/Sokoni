@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body%}
+{% if shoes %}
+        <img src="./static/white.jpg" alt="white jordan" >
+
+  {% for key,value in shoes.items() %}
+    <ul>
+        <li>
+            {{key,value}}
+        </li>
+    </ul>
+  {% endfor %}
+
+{% else %}
+  <p>shoes not available</p>
+
+{% endif %}
+{% endblock body %}

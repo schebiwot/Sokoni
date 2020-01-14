@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block body%}
+<div class="form">
+    <form action="/products/update/{{product.id}}/" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div>
+                        <label for="">Name</label>
+                        <input type="hidden" value={{product.name}}>
+                        <input type="text" value={{product.name}} name="productname" class="form-control"
+                               placeholder="Enter name">
+
+                    </div>
+                    <label for="">Price</label>
+                    <input type="hidden" value={{product.price}}>
+                    <input type="number" value={{product.price}} name="productprice" class="form-control"
+                           placeholder="Enter price">
+                </div>
+                <div>
+                    <label for="">Size</label>
+                    <input type="hidden" value={{product.size}}>
+                    <input type="number" value={{product.size}} name="productsize" class="form-control"
+                           placeholder="Enter number">
+                </div>
+                <div>
+                    <label for="">Color</label>
+                    <input type="hidden" value={{product.color}}">
+                    <input type="text" value={{product.color}} name="productcolor" class="form-control"
+                           placeholder="Enter color">
+
+                </div>
+                <div class="row">
+                    <a href="/products/delete/{{product.id}}" class="btn btn-danger">Delete</a>
+                    <input type="submit" class="btn btn-info" value="update product">
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>
+</div>
+{% endblock body %}

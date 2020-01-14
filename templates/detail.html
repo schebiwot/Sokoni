@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body%}
+
+{% if product %}
+<div class="row">
+<div class="card"  class="card text-white bg-dark mb-3" style="width: 40rem;" align="center">
+  <img class="card-img-top" src="" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Product Details</h5>
+       <div class="card-body" >
+        Name:{{product.name}}</br>
+        Size:{{product.size}}</br>
+        price:{{product.price}}</br>
+        Color:{{product.color}}</br>
+    </div>
+    <a href="/products/update/{{product.id}}" class="btn btn-primary">Update Details</a>
+  </div>
+</div>
+</div>
+
+{% else %}
+  <p>product not available</p>
+{% endif %}
+{% endblock body %}

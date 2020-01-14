@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block body%}
+<div class="form">
+    <form action="/signup/" method="post">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                 <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Email address</label>
+                    <input type="email" name="useremail" class="form-control" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your personal detail.</small>
+                </div>
+                <div class="form-group">
+                    <label for="">UserName</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="userpassword" class="form-control">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>
+
+    <!--<div class="form">-->
+    <!--    <form action="" method="post">-->
+    <!--        <div class="form-group">-->
+    <!--            <label for="inputEmail">Email</label>-->
+    <!--            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>-->
+    <!--        </div>-->
+    <!--        <div class="form-group">-->
+    <!--            <label for="inputPassword">Password</label>-->
+    <!--            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>-->
+    <!--        </div>-->
+    <!--        <div class="checkbox">-->
+    <!--            <label><input type="checkbox"> Remember me</label>-->
+    <!--        </div>-->
+    <!--        <button type="submit" class="btn btn-primary">Login</button>-->
+    <!--    </form>-->
+    <!--</div>-->
+
+
+</div>
+{% endblock body %}
